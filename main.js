@@ -162,10 +162,13 @@ function updatetotal() {
 
 //contact page
 document.getElementById("submit-btn").addEventListener("click", function() {
-    var message = document.getElementById("name" && "email" && "message").value.trim(); 
-    if (message === "") {
-        alert("Please enter a message");
+    var name = document.getElementById("name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill in all fields");
     } else {
-        alert("Thank you for you feedback. Our team will work on the problem as soon as we can.");
+        alert("Thank you for your feedback. Our team will work on the problem as soon as we can.");
     }
 });
