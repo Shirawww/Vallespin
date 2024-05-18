@@ -29,7 +29,7 @@ header{
     justify-content: space-between;
     background: #cecece;
     padding: 20px 14%;
-    box-shadow: 0 1px 6px 0 rgb(32, 33, 36 / 5%);
+    box-shadow: 0 1px 6px 0 rgb(32, 33, 36, 0.2);
     padding: 18px 14%;
     transition: all .35s ease;
 }
@@ -160,6 +160,13 @@ section{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.section-title{
+    font-size: var(--h3-font);
+    font-weight: 600;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
 .products-section{
     background: url(../Vallespin/pics/nike.png);
     background-size:cover;
@@ -167,7 +174,60 @@ section{
     background-position: center top;
 }
 
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 1.3rem;
+    margin-top: 4rem;
+}
+
+.shop-item{
+    position: relative;
+    background: var(--bg-color);
+    height: 300px;
+}
+
+.shop-item:hover{
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    transition: 0.4s;
+}
+
+.product-img{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 1px;
+    background: var(--bg-color);
+}
+
+.product-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.price{
+    font-weight: 500;
+}
+
+.quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.cart-quantity {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    height: 30px;
+}
+
 .add-cart{
+    position: absolute;
     bottom: 0;
     right: 0;
     background: var(--main-color);
@@ -180,59 +240,6 @@ section{
 .add-cart:hover{
     transform: translateY(-1px);
     background: var(--text-color);
-}
-
-.new-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    gap: 1.3rem;
-    align-items: center;
-    margin-top: 4rem;
-    text-align: center;
-}
-
-.box{
-    position: relative;
-    transition: all .40s ease;
-    background: var(--bg-color);
-    height: 390px;
-}
-
-.box img{
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 1px;
-    background: var(--bg-color);
-}
-
-.box h5{
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.box h6{
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.best-seller{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 30px;
-    background: var(--main-color);
-    color: var(--bg-color);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.box:hover{
-    transform: scale(0.9) translateY(-5px);
-    cursor: pointer;
 }
 
 .img-bg{
@@ -405,24 +412,24 @@ footer {
     opacity: 0.7;
 }
 
-.cart-container {
-    background-color: #fff;
+.cart-content {
+    background-color: var(--bg-color);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     margin-bottom: 20px;
 }
 
-.cart-item {
+.cart-box {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #ccc;
     padding: 10px 0;
 }
 
-.cart-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+.cart-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
     margin-right: 20px;
 }
 
@@ -430,13 +437,16 @@ footer {
     flex: 1;
 }
 
-.item-details h2 {
-    margin: 0;
-    font-size: 18px;
+.cart-product-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 2px;
 }
 
-.item-details p {
-    margin: 5px 0;
+.cart-price{
+    font-weight: 500;
+    padding-bottom: 2px;
 }
 
 .remove-btn {
@@ -445,26 +455,44 @@ footer {
     border: none;
     padding: 10px;
     cursor: pointer;
+    transition: all 0.35s ease;
 }
 
 .remove-btn:hover {
     background-color: #c0392b;
+    transform: translateY(-3px);
 }
 
-.cart-summary {
+.total {
     text-align: right;
-    font-size: 18px;
+    padding-left: 850px;
 }
+
+.total-title{ 
+    font-size: 18px;
+    font-weight: 600;
+    background: #ccc;
+}
+
+.total-price {
+    font-size: 18px;
+    margin-left: 0.5rem;
+    background: #ccc;
+}
+
 
 .checkout-btn {
     background-color: #27ae60;
     color: #fff;
+    margin-top: 10px;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
+    transition: all 0.35s ease;
 }
 
 .checkout-btn:hover {
     background-color: #219150;
+    transform: translateY(-3px);
 }

@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <title>Product Page</title>
     <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <script src = "main.js" defer></script>
 
     <link rel="stylesheet"
   href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
-<body bgcolor="#cecece">
+<body bgcolor="#cecece" class = "products-page">
     <header>
         <a href="index.html" class="logo">Swift Stride</a>
 
@@ -26,82 +27,96 @@
         </div>
     </header>
 
-    <section class = "new" id = "new">
-        <div class = "center-text">
-            <h2>Check out our products</h2>
+    <main>
+    <section class = "shop-container">
+        <h2 class = "section-title">Shop Products</h2>
+
+        <div class = "shop-content">
+
+            <div class = "shop-item" data-id = "1">
+                <img src = "pics/product1.jpg" alt = "Product 1" class = "product-img">
+                <h2 class = "product-title">Nike Air Force 1 Triple White</h2>
+                <span class = "price">₱5495</span>
+                <div class = quantity>
+                    <input type="number" value="1" min="1" class="cart-quantity">
+                </div>
+                <i class='bx bx-cart add-cart'></i>
+            </div>
+
+            <div class = "shop-item" data-id = "2">
+                <img src = "pics/product2.jpg" alt = "Product 2" class = "product-img">
+                <h2 class = "product-title">Nike Air Force 1 Triple White</h2>
+                <span class = "price">₱5495</span>
+                <div class = quantity>
+                    <input type="number" value="1" min="1" class="cart-quantity">
+                </div>
+                <i class='bx bx-cart add-cart'></i>
+            </div>
+
+            <div class = "shop-item" data-id = "3">
+                <img src = "pics/product3.jpg" alt = "Product 3" class = "product-img">
+                <h2 class = "product-title">Nike Air Force 1 Triple White</h2>
+                <span class = "price">₱5495</span>
+                <div class = quantity>
+                    <input type="number" value="1" min="1" class="cart-quantity">
+                </div>
+                <i class='bx bx-cart add-cart'></i>
+            </div>
+
+            <div class = "shop-item" data-id = "4">
+                <img src = "pics/product4.jpg" alt = "Product 4" class = "product-img">
+                <h2 class = "product-title">Nike Air Force 1 Triple White</h2>
+                <span class = "price">₱5495</span>
+                <div class = quantity>
+                    <input type="number" value="1" min="1" class="cart-quantity">
+                </div>
+                <i class='bx bx-cart add-cart'></i>
+            </div>
+
+            <div class = "shop-item" data-id = "5">
+                <img src = "pics/product5.jpg" alt = "Product 5" class = "product-img">
+                <h2 class = "product-title">Nike Air Force 1 Triple White</h2>
+                <span class = "price">₱5495</span>
+                <div class = quantity>
+                    <input type="number" value="1" min="1" class="cart-quantity">
+                </div>
+                <i class='bx bx-cart add-cart'></i>
+            </div>
+                <div class = "shop-item" data-id = "6">
+                <img src = "pics/product6.jpg" alt = "Product 6" class = "product-img">
+                <h2 class = "product-title">Nike Air Force 1 Triple White</h2>
+                <span class = "price">₱5495</span>
+                <div class = quantity>
+                    <input type="number" value="1" min="1" class="cart-quantity">
+                </div>
+                <i class='bx bx-cart add-cart'></i>
+            </div>
+
+            <div class = "shop-item" data-id = "7">
+                <img src = "pics/product7.jpg" alt = "Product 7" class = "product-img">
+                <h2 class = "product-title">Nike Air Force 1 Triple White</h2>
+                <span class = "price">₱5495</span>
+                <div class = quantity>
+                    <input type="number" value="1" min="1" class="cart-quantity">
+                </div>
+                <i class='bx bx-cart add-cart'></i>
+            </div>
+
+            <div class = "shop-item" data-id = "8">
+                <img src = "pics/product8.jpg" alt = "Product 8" class = "product-img">
+                <h2 class = "product-title">Nike Air Force 1 Triple White</h2>
+                <span class = "price">₱5495</span>
+                <div class = quantity>
+                    <input type="number" value="1" min="1" class="cart-quantity">
+                </div>
+                <i class='bx bx-cart add-cart'></i>
+            </div>
+
         </div>
 
-        <div class = "new-content">
-            <div class = "box">
-                <img src = "pics/product1.jpg">
-                <h5>Nike Air Force 1 Triple White</h5>
-                <h6>₱5495</h6>
-                <h6>In Stock: 12</h6>
-                <div class = best-seller>
-                    <h4>Best Seller!</h4>
-                </div>
-            </div>
-
-            <div class = "box">
-                <img src = "pics/product2.jpg">
-                <h5>Nike Dunk Low Panda</h5>
-                <h6>₱5495</h6>
-                <h6>In Stock: 12</h6>
-                <div class = best-seller>
-                    <h4>Best Seller!</h4>
-                </div>
-            </div>
-
-            <div class = "box">
-                <img src = "pics/product3.jpg">
-                <h5>Nike Dunk Low Initial D</h5>
-                <h6>₱5495</h6>
-                <h6>In Stock: 12</h6>
-                <div class = best-seller>
-                    <h4>Best Seller!</h4>
-                </div>
-            </div>
-
-            <div class = "box">
-                <img src = "pics/product4.jpg">
-                <h5>Nike Dunk Low University Blue</h5>
-                <h6>₱5495</h6>
-                <h6>In Stock: 12</h6>
-                <div class = best-seller>
-                    <h4>Best Seller!</h4>
-                </div>
-            </div>
-
-            <div class = "box">
-                <img src = "pics/product5.jpg">
-                <h5>Nike Dunk Low Vintage Green</h5>
-                <h6>₱5495</h6>
-                <h6>In Stock: 12</h6>
-            </div>
-
-            <div class = "box">
-                <img src = "pics/product6.jpg">
-                <h5>Nike Dunk Low Chicago</h5>
-                <h6>₱5495</h6>
-                <h6>In Stock: 12</h6>
-            </div>
-
-            <div class = "box">
-                <img src = "pics/product7.jpg">
-                <h5>Nike Dunk Low Pink Foam</h5>
-                <h6>₱5495</h6>
-                <h6>In Stock: 12</h6>
-            </div>
-
-            <div class = "box">
-                <img src = "pics/product8.jpg">
-                <h5>Nike Dunk Low Reverse Panda</h5>
-                <h6>₱5495</h6>
-                <h6>In Stock: 12</h6>
-            </div>
-        </div>
-        
     </section>
+
+    </main>
 
 
     <footer>
@@ -110,7 +125,7 @@
             <a href="mailto:seanvallespin@gmail.com"><i class='bx bxl-gmail' ></i></a>
             <a href="https://www.instagram.com/shiraw.09"><i class='bx bxl-instagram-alt' ></i></a>
         </div>
-        <p class="footer-text">&copy; 2024 Shiraw Kicks. All Rights Reserved.</p>
+        <p class="footer-text">&copy; 2024 Swift Stride. All Rights Reserved.</p>
     </footer>
     
 </body>
