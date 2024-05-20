@@ -105,6 +105,12 @@ function loadCartItems() {
 }
 
 function buyButtonClicked() {
+    var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    if (cartItems.length === 0) {
+        alert("Your cart is empty. Please add items to the cart before proceeding to purchase.");
+        return;
+    }
+
     if (confirm("Are you sure you want to purchase these items?")) {
         alert("You have successfully placed your order!");
         localStorage.removeItem("cartItems");
@@ -112,8 +118,8 @@ function buyButtonClicked() {
         while (cartContent.hasChildNodes()) {
             cartContent.removeChild(cartContent.firstChild);
         }
+        updatetotal();
     }
-    updatetotal();
 }
 
 function removeCartItem(event) {
