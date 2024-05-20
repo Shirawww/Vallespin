@@ -125,6 +125,94 @@ section{
     background: var(--text-color);
 }
 
+.placement {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.vid, .featured {
+    flex: 1;
+    margin: 10px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.featured {
+    max-width: 300px;
+}
+
+.feat-item {
+    text-align: center;
+    background: var(--bg-color);
+    margin-top: 5px;
+}
+
+.feat-product-img {
+    width: 100%;
+    height: auto;
+}
+
+.feat-product-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.feat-price {
+    font-size: 1.5em;
+    color: #333;
+}
+
+audio {
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider {
+    filter: invert(1);
+}
+
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #fff;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    width: 100px;
+}
+
+audio::-webkit-media-controls-enclosure {
+    border-radius: 5px;
+}
+
+audio::-webkit-media-controls-timeline-container {
+    height: 10px;
+}
+
 .services{
     background: url(../Vallespin/pics/nike.png);
     background-size:cover;
@@ -254,6 +342,7 @@ section{
     font-size: var(--h3-font);
     font-weight: 600;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 35px;
 }
 
 .contact-description{
@@ -336,6 +425,7 @@ main{
     font-size: var(--h3-font);
     font-weight: 600;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 35px;
 }
 
 .about-description{
@@ -465,7 +555,7 @@ footer {
 
 .total {
     text-align: right;
-    padding-left: 850px;
+    padding-left: 650px;
 }
 
 .total-title{ 
